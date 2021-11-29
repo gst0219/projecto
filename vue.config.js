@@ -4,7 +4,6 @@ module.exports = {
   ],
   publicPath: '/apidomusweb',
   "runtimeCompiler": true,
-  'disableHostCheck': true
 
 
 }
