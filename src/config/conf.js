@@ -1,6 +1,6 @@
 
 const config = {
-    'ipHost' : 'http://147.182.225.76',
+    'ipHost' : 'https://147.182.225.76',
 }
     
 
