@@ -3,5 +3,8 @@ module.exports = {
     "bootstrap-vue / nuxt"
   ],
   publicPath: '/apidomusweb',
-  "runtimeCompiler": true
+  "runtimeCompiler": true,
+  disableHostCheck: true
+
+
 }
