@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <div class="nav">
+  <div id="app" style="display: flex; flex-direction: column;">
+    <div class="nav"  >
       <img class="img" src="./images/logo3.png" />
 
       <div class="menu">
@@ -10,9 +10,7 @@
         <router-link to="/Perfil" class="li" v-if='this.$session.exists()'>Mis Citas</router-link>
         <router-link to="/AcercaDe" class="li">Acerca de</router-link>
       </div>
-
       <div class="botones">
-       
           <router-link   v-show='!this.$session.exists()' to="/InicioSesion"  class="link">
             <button > 
               Iniciar sesión
@@ -30,12 +28,10 @@
         </button>
       </div>
     </div>
-    <div style="display: block;">
+    <router-view />
       
-      <router-view />
+    <Footer class="footer2" ></Footer>
       
-    </div>
-    <Footer class="footer2"></Footer>
   </div>
   
   
@@ -64,14 +60,17 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  width: 101.38%;
-  margin-left: -10px;
+  
 }
 
 .nav {
+  width: 100%;
+  z-index: 101;
+  top: 0;
   justify-content: space-between;
   display: flex;
   align-items: center;
+  align-self: start;
   margin-top: -10px;
   background-color: #000;
 }
@@ -127,5 +126,6 @@
 }
 
 .footer2{
+  align-self: flex-end ;
 }
 </style>

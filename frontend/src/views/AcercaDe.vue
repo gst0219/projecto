@@ -62,7 +62,6 @@ export default {
 
 .c {
   margin-left: 400px;
-  padding-top: 20px;
 }
 
 .content {

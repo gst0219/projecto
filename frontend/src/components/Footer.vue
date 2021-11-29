@@ -1,6 +1,5 @@
 <template>
   <div class="footer">
-    <footer>
       <div class="footer-content">
         <div class="secciones">
           <div class="Domus">
@@ -29,7 +28,6 @@
           >
         </p>
       </div>
-    </footer>
   </div>
 </template>
 
@@ -42,19 +40,18 @@ export default {
 
 <style>
 .footer {
-  bottom: 0;
-  margin-top: 0;
   background: #000;
-  height: auto;
-  padding-top: 40px;
   color: #fff;
   width: 100%;
+  margin-top: 0px !important;
 }
 
 .secciones {
   display: flex;
+  padding: 2em;
 }
 .footer-content {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +68,6 @@ export default {
 
 .footer-content p {
   max-width: 500px;
-  margin: 10px auto;
   line-height: 28px;
   font-size: 16px;
 }

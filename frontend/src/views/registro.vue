@@ -5,46 +5,50 @@
       <h1>Registrarse</h1>
       <div class="input-contenedor">
         <i class="fas fa-envelope icon"></i>
-        <input type="text" placeholder="Nombre(s)" />
+        <input type="text" v-model="body.usuario" placeholder="Usuario" />
+      </div>
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" v-model="body.password"  placeholder="Password" />
+      </div>
+      <div class="input-contenedor">
+        <i class="fas fa-envelope icon"></i>
+        <input type="text" v-model="body.nombre"  placeholder="Nombre(s)" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Apellido Paterno" />
+        <input type="text" v-model="body.apellido_p"  placeholder="Apellido Paterno" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Apellido Materno" />
+        <input type="text" v-model="body.apellido_m"  placeholder="Apellido Materno" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Genero" />
+        <input type="text" v-model="body.estadoCivil"  placeholder="Estado Civil" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Estado Civil" />
+        <input type="text" v-model="body.nss"  placeholder="NSS" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="NSS" />
+        <input type="text" v-model="body.curp"  placeholder="CURP" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="CURP" />
+        <input type="text" v-model="body.tipoCredito"  placeholder="Tipo de credito inmobiliario" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Tipo de credito inmobiliario" />
+        <input type="date" v-model="body.fecha_nacimiento"  placeholder="Fecha de nacimiento" />
       </div>
       <div class="input-contenedor">
         <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Fecha de nacimiento" />
+        <input type="text" v-model="body.num_telefono"  placeholder="Numero de Telefono" />
       </div>
-      <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
-        <input type="text" placeholder="Numero de Telefono" />
-      </div>
-      <button id="btn">
-        <router-link to="/" class="link">Registrarse</router-link>
+      <button id="btn" @click="registrarse()" type="button">
+          Registrarse 
       </button>
       <p>
         ¿Ya tienes cuenta?
@@ -55,10 +59,82 @@
 </template>
 
 <script>
+  
+import data from "../services/sessionFunction.js"
+  
+
 export default {
   name: "registro",
+  data(){
+    return {
+      body:{
+        nombre:'',
+        apellido_p:'',
+        apellido_m:'',
+        usuario:'',
+        password:'',
+        estadoCivil:'',
+        nss:'',
+        curp:'',
+        tipoCredito:'',
+        fecha_nacimiento:'',
+        num_telefono:'',
+      }
+      
+    }
+  },
   components: {
   },
+  methods:{
+    async registrarse(){
+      let respuesta = await data.registrarse(this.body);
+      
+      if(!respuesta.data.resultado){
+        this.$alert(
+          '',
+          this.mostrarErrores(respuesta.data.msg),
+          'warning'
+        )
+        return ;
+        
+        
+      }
+      
+      this.$fire({
+        title: "",
+        text: "Se ha registrado",
+        type: "success",
+        timer: 3000
+      }).then(r => {
+        this.$router.push('/InicioSesion')
+
+      });
+      
+      
+      
+    },
+    mostrarErrores( obj ){
+      let data = Object.keys(obj)
+      
+      let strings = data.map(
+        function(x){
+          
+          return obj[x][0];
+        }        
+      )
+      let string = '<p> ';
+      for(let i=0 ; i < strings.length ; i++){
+        string+=`${strings[i]} <br>`;
+      }
+      strings +='</p>'
+      
+      
+      console.log(string)
+     return string;
+      
+      
+    }
+  }
 };
 </script>
 
@@ -83,15 +159,21 @@ h1 {
   font-size: 40px;
 }
 input[type="text"],
+input[type="date"],
 input[type="password"] {
   font-size: 20px;
   width: 80%;
   padding: 10px;
   border: none;
+  border-radius: 10px;
+  
 }
 .input-contenedor {
+  margin: 10px;
   margin-bottom: 15px;
   border: 1px solid #aaa;
+  border-radius: 10px;
+  
 }
 .icon {
   min-width: 50px;

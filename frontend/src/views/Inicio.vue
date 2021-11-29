@@ -106,11 +106,11 @@ export default {
 
 <style>
 .inicio {
+  align-content: center;
   margin-top: -60px;
   background: url(../images/pexels-photo-731082.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 660px;
   opacity: 1.1;
   width: 100%;
 }
@@ -276,10 +276,7 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 250px;
-  margin-top: 0;
-  margin-bottom: -60px;
-  padding-top: 1px;
+  padding-top: 1em;
 }
 
 .frase p {

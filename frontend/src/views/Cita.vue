@@ -48,8 +48,8 @@
         <h3>Detalle de la cita:</h3>
         <p>
           <br />
-          <span> Fecha: </span>25 de diciembre de 2021 <br />
-          <span> Hora: </span>9:00 <br />
+          <span> Fecha: </span> {{fechaCita}} <br />
+          <span> Hora: </span> {{ hora }}<br />
           <span> Modelo del inmueble: </span>Modelo 1
         </p>
         <div class="botones">
