@@ -7,34 +7,34 @@
     <div>
       <ul class="galeria">
         <li>
-          <a href="#img1"><img src="../images/casa3.jpeg" alt="img" /></a>
+          <a href="#img1"><img :src="require(`../images/${inmueble.id}.jpeg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img2"><img src="../images/living.jpeg" alt="img" /></a>
+          <a href="#img2"><img :src="require(`../images/salacasa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img3"><img src="../images/cocina.jpg" alt="img" /></a>
+          <a href="#img3"><img :src="require(`../images/cocinacasa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img4"><img src="../images/recamara1.jpg" alt="img" /></a>
+          <a href="#img4"><img :src="require(`../images/room1casa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img5"><img src="../images/bano1.jpg" alt="img" /></a>
+          <a href="#img5"><img src="../images/bano1casa1.jpg" alt="img" /></a>
         </li>
         <li>
-          <a href="#img6"><img src="../images/recamara2.jpg" alt="img" /></a>
+          <a href="#img6"><img :src="require(`../images/room2casa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img7"><img src="../images/recamara3.jpg" alt="img" /></a>
+          <a href="#img7"><img :src="require(`../images/room3casa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img8"><img src="../images/bano2.jpg" alt="img" /></a>
+          <a href="#img8"><img src="../images/bano2casa1.jpg" alt="img" /></a>
         </li>
         <li>
-          <a href="#img9"><img src="../images/escalera.jpg" alt="img" /></a>
+          <a href="#img9"><img :src="require(`../images/escaleracasa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
         <li>
-          <a href="#img10"><img src="../images/patio.jpg" alt="img" /></a>
+          <a href="#img10"><img :src="require(`../images/patiocasa${inmueble.id}.jpg`)" alt="img" /></a>
         </li>
       </ul>
     </div>
@@ -144,7 +144,7 @@
       <h3>Exterior</h3>
       <div class="imagen">
         <a href="#img10">&#60;</a>
-        <a href=""><img src="../images/casa3.jpeg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/${inmueble.id}.jpeg`)" alt="img" /></a>
         <a href="#img2"> > </a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -154,7 +154,7 @@
       <h3>Sala</h3>
       <div class="imagen">
         <a href="#img1">&#60;</a>
-        <a href=""><img src="../images/living.jpeg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/salacasa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img3">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -164,7 +164,7 @@
       <h3>Cocina</h3>
       <div class="imagen">
         <a href="#img2">&#60;</a>
-        <a href=""><img src="../images/cocina.jpg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/cocinacasa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img4">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -174,7 +174,7 @@
       <h3>Recamara</h3>
       <div class="imagen">
         <a href="#img3">&#60;</a>
-        <a href=""><img src="../images/recamara1.jpg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/room1casa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img5">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -184,7 +184,7 @@
       <h3>Baño</h3>
       <div class="imagen">
         <a href="#img4">&#60;</a>
-        <a href=""><img src="../images/bano1.jpg" alt="img" /></a>
+        <a href=""><img src="../images/bano1casa1.jpg" alt="img" /></a>
         <a href="#img6">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -194,7 +194,7 @@
       <h3>Recamara</h3>
       <div class="imagen">
         <a href="#img5">&#60;</a>
-        <a href=""><img src="../images/recamara2.jpg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/room2casa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img7">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -204,7 +204,7 @@
       <h3>Recamara</h3>
       <div class="imagen">
         <a href="#img6">&#60;</a>
-        <a href=""><img src="../images/recamara3.jpg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/room3casa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img8">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -214,7 +214,7 @@
       <h3>Baño</h3>
       <div class="imagen">
         <a href="#img7">&#60;</a>
-        <a href=""><img src="../images/bano2.jpg" alt="img" /></a>
+        <a href=""><img src="../images/bano2casa1.jpg" alt="img" /></a>
         <a href="#img9">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -224,7 +224,7 @@
       <h3>Escalera</h3>
       <div class="imagen">
         <a href="#img8">&#60;</a>
-        <a href=""><img src="../images/escalera.jpg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/escaleracasa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img10">></a>
       </div>
       <a href="" class="cerrar">X</a>
@@ -234,7 +234,7 @@
       <h3>Patio</h3>
       <div class="imagen">
         <a href="#img9">&#60;</a>
-        <a href=""><img src="../images/patio.jpg" alt="img" /></a>
+        <a href=""><img :src="require(`../images/patiocasa${inmueble.id}.jpg`)" alt="img" /></a>
         <a href="#img1">></a>
       </div>
       <a href="" class="cerrar">X</a>

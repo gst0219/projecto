@@ -1,8 +1,8 @@
 <template>
   <div class="casa">
-    <img src="../images/casa4.jpeg" alt="casa" class="imagen" />
+    <img :src="require(`../images/${id}.jpeg`)"  class="imagen" />
     <div class="text">
-      <h3>{{ index }}</h3>
+      <h3>{{ id }}</h3>
       <h4>{{ title }}</h4>
       <button>
         <router-link :to="'/CasaMuestra/'+id" class="link">Leer Mas...</router-link>
@@ -16,14 +16,13 @@ export default {
   name: "Casa",
   data(){
     return {
-      url  :''
+      url  :'',
     }
   },
   props:[
     'title',
     'index',
-    'id'
-    
+    'id',
   ],
   computed(){
     

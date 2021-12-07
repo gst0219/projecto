@@ -8,43 +8,43 @@
         <input type="text" v-model="body.usuario" placeholder="Usuario" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-envelope icon"></i>
-        <input type="text" v-model="body.password"  placeholder="Password" />
+        <i class="fas fa-unlock icon"></i>
+        <input type="password" v-model="body.password"  placeholder="Password" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-envelope icon"></i>
+        <i class="fas fa-user icon"></i>
         <input type="text" v-model="body.nombre"  placeholder="Nombre(s)" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-user icon"></i>
         <input type="text" v-model="body.apellido_p"  placeholder="Apellido Paterno" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-user icon"></i>
         <input type="text" v-model="body.apellido_m"  placeholder="Apellido Materno" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-couch icon"></i>
         <input type="text" v-model="body.estadoCivil"  placeholder="Estado Civil" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-id-card icon"></i>
         <input type="text" v-model="body.nss"  placeholder="NSS" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-id-card icon"></i>
         <input type="text" v-model="body.curp"  placeholder="CURP" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-credit-card icon"></i>
         <input type="text" v-model="body.tipoCredito"  placeholder="Tipo de credito inmobiliario" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-calendar icon"></i>
         <input type="date" v-model="body.fecha_nacimiento"  placeholder="Fecha de nacimiento" />
       </div>
       <div class="input-contenedor">
-        <i class="fas fa-unlock icon"></i>
+        <i class="fas fa-phone icon"></i>
         <input type="text" v-model="body.num_telefono"  placeholder="Numero de Telefono" />
       </div>
       <button id="btn" @click="registrarse()" type="button">
@@ -140,7 +140,7 @@ export default {
 
 <style>
 .Registro {
-  background: url(../images/pexels-photo-731082.jpeg);
+  background: url(../images/back.jpeg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;

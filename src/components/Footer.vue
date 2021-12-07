@@ -23,7 +23,7 @@
       </div>
       <div class="footer-bottom">
         <p>
-          Todos los derechos reservados &copy;2020 SICSA. diseñado por<span>
+          Todos los derechos reservados &copy;2021 DOMUS. diseñado por<span>
             Equipo 1</span
           >
         </p>

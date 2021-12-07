@@ -10,10 +10,9 @@
           <div>
             <h2>Mision</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
+              Proporcionar un asesoramiento integral, a personas y empresas, que permita solucionar todas sus necesidades relacionadas con el mercado inmobiliario. Aportándoles una mayor rentabilidad basada en la responsabilidad y la trasparencia.
+
+
             </p>
           </div>
         </div>
@@ -24,10 +23,7 @@
           <div>
             <h2>Vision</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat
+              Convertirnos en la empresa de referencia del sector inmobiliario en la provincia, con objeto de que las personas que intervienen en este mercado piensen en nosotros como primera opción en el momento de vender, comprar o alquilar una vivienda.
             </p>
           </div>
           <div>

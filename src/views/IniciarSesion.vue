@@ -67,9 +67,9 @@ export default {
   
 }
 .Registro {
-  background: url(../images/pexels-photo-731082.jpeg);
+  background: url(../images/back.jpeg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
 }
 

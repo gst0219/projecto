@@ -1,11 +1,13 @@
 <template>
   <div class="inicio">
-    <div class="titulo">
+    <div class="principal">
+      <div class="titulo">
       <h1>DOMUS</h1>
       <p>La vida que mereces, ¡Tu nuevo estilo de vida comienza aqui!</p>
       <button id="boton">
         <router-link to="/Inmuebles" class="link">Comprar</router-link>
       </button>
+    </div>
     </div>
 
     <div class="Info">
@@ -64,7 +66,14 @@
       <div class="image"></div>
     </div>
 
-    <Inmuebles></Inmuebles>
+    <div class="Modelos">
+      <div class="titulo2">
+            <h2>Modelos Disponibles</h2> 
+            <p>¡Un hogar a tu medida! Cada uno equipado para darle a tu familia un espacio ideal</p>
+          </div>
+
+          <Catalogo/>
+    </div>
 
     <div class="ubicacion">
       <h3>Una de las mejores ubicaciones de tu ciudad</h3>
@@ -89,7 +98,7 @@
 
 <script>
 import Map from "../components/Map.vue";
-import Inmuebles from "../views/Inmuebles.vue";
+import Catalogo from "../components/Catalogo.vue";
 
 
 export default {
@@ -97,7 +106,7 @@ export default {
   
   components: {
     Map,
-    Inmuebles
+    Catalogo
   },
   beforeCreate(){
   }
@@ -107,12 +116,15 @@ export default {
 <style>
 .inicio {
   align-content: center;
-  margin-top: -60px;
-  background: url(../images/pexels-photo-731082.jpeg);
+ 
+}
+
+.principal {
+   background: url(../images/back.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 1.1;
-  width: 100%;
+  height: 600px;
 }
 
 .titulo {
@@ -155,6 +167,7 @@ export default {
 .Modelos {
   background-color: rgb(31, 30, 30);
   text-align: center;
+  margin-bottom: -150px;
 }
 
 .titulo2 {
@@ -175,14 +188,13 @@ export default {
   margin-top: 0;
 }
 .catalogo {
-  margin-top: -50px;
+  margin-top: -150px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .Info {
   display: flex;
-  margin-top: 220px;
 }
 
 .textInfo {
@@ -272,19 +284,18 @@ export default {
 }
 
 .frase {
-  background: url(../images/pexels-photo-731082.jpeg);
+  background: url(../images/back.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 1em;
 }
 
 .frase p {
   text-align: center;
-  margin-top: 3rem;
   font-size: 30px;
   font-weight: 600;
   color: #ffd700;
   line-height: 50px;
+  margin-bottom: -0;
 }
 </style>
